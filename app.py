@@ -10,7 +10,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 @app.route("/", methods=("GET", "POST"))
 def index():
     if request.method == "POST":
-        animal = request.form["animal"]
+        animal = request.form["Pizza"]
         response = openai.Completion.create(
             model="text-davinci-002",
             prompt=generate_prompt(animal),
